@@ -32,25 +32,25 @@ export function MainNav() {
       href: "/workouts",
       label: "Workouts",
       icon: Dumbbell,
-      active: pathname === "/workouts"
+      active: pathname === "/exercise-planner"
     },
     {
       href: "/schedule",
       label: "Schedule",
       icon: Calendar,
-      active: pathname === "/schedule"
+      active: pathname === "/qr-system"
     },
     {
       href: "/progress",
       label: "Progress",
       icon: BarChart,
-      active: pathname === "/progress"
+      active: pathname === "/smart-booking"
     },
     {
       href: "/meal-plan",
       label: "Meal Plan",
       icon: ClipboardList,
-      active: pathname === "/meal-plan"
+      active: pathname === "/meal-prep"
     }
   ]
 
