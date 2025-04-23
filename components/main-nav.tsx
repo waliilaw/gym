@@ -3,15 +3,13 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import { 
   Home, 
-  Calendar, 
   Dumbbell, 
-  User, 
+  Calendar, 
   BarChart, 
-  Settings,
-  Menu
+  Brain,
+  ClipboardList
 } from "lucide-react"
 
 export function MainNav() {
@@ -23,6 +21,12 @@ export function MainNav() {
       label: "Dashboard",
       icon: Home,
       active: pathname === "/"
+    },
+    {
+      href: "/exercise-planner",
+      label: "Exercise Planner",
+      icon: Brain,
+      active: pathname === "/exercise-planner"
     },
     {
       href: "/workouts",
@@ -43,21 +47,15 @@ export function MainNav() {
       active: pathname === "/progress"
     },
     {
-      href: "/profile",
-      label: "Profile",
-      icon: User,
-      active: pathname === "/profile"
-    },
-    {
-      href: "/settings",
-      label: "Settings",
-      icon: Settings,
-      active: pathname === "/settings"
+      href: "/meal-plan",
+      label: "Meal Plan",
+      icon: ClipboardList,
+      active: pathname === "/meal-plan"
     }
   ]
 
   return (
-    <nav className="flex items-center space-x-4 lg:space-x-6 mx-6">
+    <nav className="flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => {
         const Icon = route.icon
         return (
